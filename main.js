@@ -1,7 +1,10 @@
-var isLeapYear = function() {};
-
-
-
+var isLeapYear = function(year) {
+  if ((year % 4 === 0) && (year % 100 === 0) && (year % 400 !== 0)) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 var outputCalc = function(amount) {
   switch(true) {
@@ -21,6 +24,7 @@ var outputHelloWorld = function () {
 };
 
 module.exports = {
+  isLeapYear: isLeapYear,
   outputCalc: outputCalc,
   outputHelloWorld: outputHelloWorld
 };

@@ -18,12 +18,10 @@ describe("Hello World", function() {
 
 describe("Leap Year", function() {
   it("should return either true or false for a given year", function() {
-    if (year % 4 === 0) {
-      if (year % 100 === 0 && year % 400 !== 0) {
-        expect(code.getLeapYear().toEqual(true));
-      }
-    } else {
-      expect(code.getLeapYear().toEqual(false));
-    }
+    expect(code.isLeapYear(1600)).toEqual(true);
+    expect(code.isLeapYear(1200)).toEqual(true);
+    expect(code.isLeapYear(1700)).toEqual(false);
+    expect(code.isLeapYear(1800)).toEqual(false);
+    expect(code.isLeapYear(1900)).toEqual(false);
   });
 });
