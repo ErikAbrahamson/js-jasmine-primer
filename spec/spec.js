@@ -25,3 +25,9 @@ describe("Leap Year", function() {
     expect(code.isLeapYear(1900)).toEqual(false);
   });
 });
+
+describe('Make strings uppercase', function() {
+  it('should return a string in uppercase format', function() {
+    expect(code.changeToUpper(['a','b'])).toEqual(['A','B']);
+  });
+});

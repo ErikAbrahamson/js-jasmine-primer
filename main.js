@@ -1,3 +1,7 @@
+var outputHelloWorld = function () {
+  return "Hello, world!";
+};
+
 var isLeapYear = function(year) {
   if (year % 4 === 0 && !(year % 100 === 0 && year % 400 !== 0)) {
     return true;
@@ -19,12 +23,17 @@ var outputCalc = function(amount) {
     }
 };
 
-var outputHelloWorld = function () {
-  return "Hello, world!";
+var changeToUpper = function(list) {
+  var copy = [];
+  for (var i = 0; i < list.length; i ++) {
+    copy.push(list[i].toUpperCase());
+  }
+  return copy;
 };
 
 module.exports = {
   isLeapYear: isLeapYear,
   outputCalc: outputCalc,
-  outputHelloWorld: outputHelloWorld
+  outputHelloWorld: outputHelloWorld,
+  changeToUpper: changeToUpper
 };
