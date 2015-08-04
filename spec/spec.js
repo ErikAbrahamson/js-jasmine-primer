@@ -31,3 +31,10 @@ describe('Make strings uppercase', function() {
     expect(code.changeToUpper(['a','b'])).toEqual(['A','B']);
   });
 });
+
+describe("Compare vals in object array", function() {
+  it("takes in an array of objects and returns the object with the greatest strength attribute", function() {
+    var list = [{strength: 20, name: 'A'}, {strength: 10, name: 'B'}];
+    expect(code.findGreatestStrength(list)).toEqual(list[0]);
+  });
+});

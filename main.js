@@ -31,9 +31,20 @@ var changeToUpper = function(list) {
   return copy;
 };
 
+var findGreatestStrength = function(objectArray) {
+  var max = 0;
+  for (var i = 0; i < objectArray.length; i++) {
+    if (objectArray[i].strength > max) {
+      max = objectArray[i];
+    }
+  }
+  return max;
+};
+
 module.exports = {
   isLeapYear: isLeapYear,
   outputCalc: outputCalc,
   outputHelloWorld: outputHelloWorld,
-  changeToUpper: changeToUpper
+  changeToUpper: changeToUpper,
+  findGreatestStrength: findGreatestStrength
 };
